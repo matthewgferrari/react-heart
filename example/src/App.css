@@ -1,0 +1,16 @@
+.codeSpace{
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.coding > div{
+  border-radius: .6rem !important;
+}
+.coding{
+  margin-bottom: 1rem;
+}
+body{
+  background-color: rgb(250, 223, 224);
+}
+.error > pre{
+  padding: 1rem;
+}
