@@ -1,5 +1,5 @@
 
-<h1 align="center"><img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/heart.png"/>React-Heart</h1>
+<h1 align="center"><img width = "50px" src = "https://github.com/matthewgferrari/react-heart/blob/main/example/heart.png"/>React-Heart</h1>
 
 <div align="center">
 
@@ -11,9 +11,9 @@
  
 
 ## Demo
-<div style = "display: flex; flex-direction: column;">
-<img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/>
+<div>
 <a href = "https://www.github.io.matthewgferrari/react-heart">Live demo</a>
+<img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/>
 </div>
 
 ## Installation
@@ -32,7 +32,7 @@ function App() {
 	const [active, setActive] = useState(false)
 	return (
 		<div style={{ width: "2rem" }}>
-			<Heart isActive={active}  onClick={() => setActive(!active)}/>
+			<Heart isActive={active} onClick={() => setActive(!active)}/>
 		</div>
 	);
 }
@@ -49,8 +49,7 @@ activeColor|color|optional |red| Color of active heart
 className |string |optional | N/A| Class name to apply custom CSS
 style|object|optional |N/A| Style object
 
-## Examples
-
+## Example
 ```sh
 import React, { useState } from "react"
 import Heart from "react-heart"
@@ -59,20 +58,7 @@ function App() {
 	const [active, setActive] = useState(false)
 	return (
 		<div style={{ width: "2rem" }}>
-			<Heart isActive={active}  onClick={() => setActive(!active)} animationScale = {2} animationTrigger = "hover" inactiveColor = "blue" activeColor = "yellow" style = {{marginTop:'1rem'}} />
-		</div>
-	);
-}
-```
-```sh
-import React, { useState } from "react"
-import Heart from "react-heart"
-
-function App() {
-	const [active, setActive] = useState(false)
-	return (
-		<div style={{ width: "2rem" }}>
-			<Heart isActive={active}  onClick={() => setActive(!active)} animationTrigger = "none" inactiveColor = "rgba(255,125,125,.75)" activeColor = "#e019ae" style = {{marginTop:'1rem'}}/>
+			<Heart isActive={active} onClick={() => setActive(!active)} animationTrigger = "none" inactiveColor = "rgba(255,125,125,.75)" activeColor = "#e019ae" style = {{marginTop:'1rem'}}/>
 		</div>
 	);
 }
