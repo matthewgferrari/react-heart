@@ -41,8 +41,8 @@ isActive | bool| required| N/A | Current heart status
 onClick| function| required| N/A| Heart was clicked callback
 animationTrigger | 'none' \| 'click' \| 'hover' | optional | 'click'| Animation trigger
 AnimationScale| number|optional|1.05|Scale of animation 
-inactiveColor | color|optional|'black'|Color of inactive heart
-activeColor|color|optional |'red'| Color of active heart
+inactiveColor | string|optional|'black'|Color of inactive heart
+activeColor|string|optional |'red'| Color of active heart
 className |string |optional | N/A| Class name to apply custom CSS
 style|object|optional |N/A| Style object
 
