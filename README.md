@@ -8,7 +8,7 @@
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/matthewgferrari/engine-express/blob/main/LICENSE)
 [![npm version](https://img.shields.io/npm/v/react-heart)](https://www.npmjs.com/package/express-engine)
 </div>
- <img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/>
+ <div align = "center"><img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/></div>
 
 ## Demo
 <a href = "https://www.github.io.matthewgferrari/react-heart">Live demo and sandbox</a>
