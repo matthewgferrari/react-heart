@@ -5,8 +5,8 @@
 
 <h4 align = "center">An SVG based, animated and customizable heart button</h4>
 
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/matthewgferrari/engine-express/blob/main/LICENSE)
-[![npm version](https://img.shields.io/npm/v/react-heart)](https://www.npmjs.com/package/express-engine)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/matthewgferrari/react-heart/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/react-heart)](https://www.npmjs.com/package/react-heart)
 </div>
  <div align = "center"><img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/></div>
 
