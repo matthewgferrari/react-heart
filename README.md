@@ -9,7 +9,7 @@
 [![npm version](https://img.shields.io/npm/v/react-heart)](https://www.npmjs.com/package/react-heart)
 [![npm size](https://img.shields.io/bundlephobia/min/react-heart)](https://github.com/matthewgferrari/react-heart/blob/main/src)
 </div>
- <div align = "center"><img src = https://matthewgferrari.github.io/react-heart/example/demo.gif"/></div>
+ <div align = "center"><img src = "https://matthewgferrari.github.io/react-heart/example/demo.gif"/></div>
 
 ## Demo
 [Live demo and sandbox](https://matthewgferrari.github.io/react-heart/example/build/)
