@@ -7,6 +7,7 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/matthewgferrari/react-heart/blob/main/LICENSE)
 [![npm version](https://img.shields.io/npm/v/react-heart)](https://www.npmjs.com/package/react-heart)
+[![npm size](https://img.shields.io/bundlephobia/min/react-heart)](https://github.com/matthewgferrari/react-heart/blob/main/src)
 </div>
  <div align = "center"><img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/></div>
 

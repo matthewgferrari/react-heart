@@ -1,10 +1,16 @@
 {
   "name": "react-heart",
   "version": "1.0.1",
+  "private": "false",
   "description": "SVG based clickable heart for react with animation options",
   "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "rm -rf dist && mkdir dist &&  babel src/. -d dist --copy-files"
   },
   "repository": {
     "type": "git",
@@ -24,11 +30,15 @@
   },
   "homepage": "https://github.com/matthewgferrari/react-heart#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-react": "^7.12.5",
     "eslint": "^7.13.0",
     "eslint-plugin-react": "^7.21.5"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "styled-components": "^5.2.1"
   }
 }
