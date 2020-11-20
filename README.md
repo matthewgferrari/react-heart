@@ -1,5 +1,5 @@
 
-<h1 align="center"><img width = "50px" src = "https://github.com/matthewgferrari/react-heart/blob/main/example/heart.png"/>React-Heart</h1>
+<h1 align="center"><img width = "50px" src = "https://matthewgferrari.github.io/react-heart/example/heart.png"/>React-Heart</h1>
 
 <div align="center">
 
@@ -9,10 +9,10 @@
 [![npm version](https://img.shields.io/npm/v/react-heart)](https://www.npmjs.com/package/react-heart)
 [![npm size](https://img.shields.io/bundlephobia/min/react-heart)](https://github.com/matthewgferrari/react-heart/blob/main/src)
 </div>
- <div align = "center"><img src = "https://github.com/matthewgferrari/react-heart/blob/main/example/demo.gif"/></div>
+ <div align = "center"><img src = https://matthewgferrari.github.io/react-heart/example/demo.gif"/></div>
 
 ## Demo
-<a href = "https://www.github.io.matthewgferrari/react-heart">Live demo and sandbox</a>
+[Live demo and sandbox](https://matthewgferrari.github.io/react-heart/example/build/)
 
 ## Installation
 React-Heart is available as an [npm package](https://www.npmjs.com/package/react-heart).
