@@ -2,7 +2,7 @@
   "name": "react-heart",
   "version": "1.0.1",
   "private": "false",
-  "description": "SVG based clickable heart for react with animation options",
+  "description": "SVG based clickable heart button for react with animation options",
   "main": "index.js",
   "babel": {
     "presets": [
