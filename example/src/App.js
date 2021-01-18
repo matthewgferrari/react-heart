@@ -7,126 +7,84 @@ import {
   LiveError,
   LivePreview
 } from 'react-live'
+import reactCSS from 'reactcss'
+import theme from "prism-react-renderer/themes/nightOwl";
 
-var scope = { Heart, useState }
-var code = `
-function App() {
-  const [active, setActive] = useState(false)
-  return (
-      <div style={{ width: "2rem", padding: "5rem" }}>
-        <Heart isActive={active} onClick={() => setActive(!active)} animationScale = {1.25} style = {{marginBottom:'1rem'}} />
-        <Heart isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "blue" animationTrigger = "hover" animationScale = {1.5} />
-      </div>
-  );
-}
-`
-var theme = {
-  plain: {
-    backgroundColor: "#2a2734",
-    color: "#9a86fd"
-  },
-  styles: [
-    {
-      types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
-      style: {
-        color: "#6c6783"
-      }
-    },
-    {
-      types: ["namespace"],
-      style: {
-        opacity: 0.7
-      }
-    },
-    {
-      types: ["tag", "operator", "number"],
-      style: {
-        color: "#e09142"
-      }
-    },
-    {
-      types: ["property", "function"],
-      style: {
-        color: "#9a86fd"
-      }
-    },
-    {
-      types: ["tag-id", "selector", "atrule-id"],
-      style: {
-        color: "#eeebff"
-      }
-    },
-    {
-      types: ["attr-name"],
-      style: {
-        color: "#c4b9fe"
-      }
-    },
-    {
-      types: [
-        "boolean",
-        "string",
-        "entity",
-        "url",
-        "attr-value",
-        "keyword",
-        "control",
-        "directive",
-        "unit",
-        "statement",
-        "regex",
-        "at-rule",
-        "placeholder",
-        "variable"
-      ],
-      style: {
-        color: "#ffcc99"
-      }
-    },
-    {
-      types: ["deleted"],
-      style: {
-        textDecorationLine: "line-through"
-      }
-    },
-    {
-      types: ["inserted"],
-      style: {
-        textDecorationLine: "underline"
-      }
-    },
-    {
-      types: ["italic"],
-      style: {
-        fontStyle: "italic"
-      }
-    },
-    {
-      types: ["important", "bold"],
-      style: {
-        fontWeight: "bold"
-      }
-    },
-    {
-      types: ["important"],
-      style: {
-        color: "#c4b9fe"
-      }
+var examples = [{
+  code: `function App() {
+    const [active, setActive] = useState(false)
+    return (
+        <div style={{ width: "2rem" }}>
+          <Heart isActive={active} onClick={() => setActive(!active)} animationScale = {1.25} style = {{marginBottom:'1rem'}} />
+        </div>
+    );
+  }`,
+  title: "Basic"
+},
+{
+  code: `function App() {
+    const [active, setActive] = useState(false)
+    return (
+        <div style={{ width: "2rem" }}>
+          <Heart isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "blue" animationTrigger = "hover" animationScale = {1.5} />
+        </div>
+    );
+  }`,
+  title: "Animate on Click and Custom Colors"
+},
+{
+  code: `function App() {
+    const [active, setActive] = useState(false)
+    return (
+        <div style={{ width: "2rem" }}>
+          <Heart isActive={active} onClick={() => setActive(!active)} style = {{fill: active ? "black" : "orange", stroke: active ? "orange":"black", filter: "drop-shadow(0px 3px 3px rgba(0, 0, 0, 1))"}} />
+        </div>
+    );
+  }`,
+  title: "Custom Styles"
+},
+{
+  code: `function App(props) {
+    const [active, setActive] = useState(false)
+    return (
+        <div style={{ width: "2rem" }}>
+          <Heart isActive={active} onClick={() => setActive(!active)} animationScale = {1.2} animationTrigger = "both" animationDuration = {.2} className = {\`customHeart\${active ? " active": ""}\`}/>
+        </div>
+    );
+  }
+  /* CSS
+    .customHeart:hover {
+      fill: #c9c7c7 !important;
+      transition: fill 0.1s;
     }
-  ]
-};
+    .customHeart:active {
+      fill: #a5a5a5 !important;
+      transition: fill 0.1s;
+    }
+    .active.customHeart:hover {
+      fill: rgb(205, 3, 3) !important;
+      transition: fill 0.1s;
+    }
+    .active.customHeart:active {
+      fill: rgb(155, 6, 6) !important;
+      transition: fill 0.1s;
+    }
+*/    `,
+  title: "Animate on hover and click, Animation Duration, and Custom CSS"
+}
+]
 
 function App() {
   const [active, onClick] = useState(true)
 
   return (
-    <div className="App" style={{ marginTop: "3rem" }}>
+    <div className="App" style={{ marginTop: "1.25rem" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 
         <div style={{ width: "5rem" }}>
-          <Heart isActive={active} onClick={() => onClick(!active)} />
+          <Heart className = {`titleHeart${active ? " active": ""}`} animationScale={1.1} animationTrigger="both" isActive={active} onClick={() => onClick(!active)} />
         </div>
-        <div style={{ paddingLeft: "1rem" }}>
+        <div style={{ paddingLeft: ".65rem" }}>
           <h1 style={{ padding: "0", marginBottom: "0", marginTop: ".5rem" }}>React-Heart</h1>
           <h4 style={{ padding: "0", marginTop: "0" }}>An SVG based, animated and customizable heart button</h4>
         </div>
@@ -160,20 +118,24 @@ function App() {
 
         @<a href="https://www.npmjs.com/package/react-heart">react-heart</a>
       </div>
-      <div className="codeSpace">
-        <LiveProvider code={code} scope={scope} theme={theme} >
-          <div className="coding">
-            <LiveEditor />
-          </div>
-          <div className="error" style={{ backgroundColor: "rgb(42, 39, 52)", borderRadius: ".4rem", color: "white" }}>
-            <LiveError />
-          </div>
-          <div style={{ backgroundColor: "white", marginTop: "2rem" }}>
-            <LivePreview />
-          </div>
-        </LiveProvider>
-
-      </div>
+      {
+        examples.map((code, index) => {
+          return (
+            <div key={index} style={{ marginLeft: "50px", marginRight: "50px", marginBottom: "2rem" }}>
+              <h1 style={{ textAlign: "center", marginBottom: ".5rem" }}>{code.title}</h1>
+              <LiveProvider code={code.code} scope={{ Heart, useState, reactCSS }} theme={theme} >
+                <div className="wrapper">
+                  <div className="editor">
+                    <LiveEditor className="editorInner" />
+                  </div>
+                  <LivePreview className="preview" />
+                </div>
+                <LiveError className="error" />
+              </LiveProvider>
+            </div>
+          )
+        })
+      }
     </div>
   );
 }

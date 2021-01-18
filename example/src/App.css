@@ -1,16 +1,110 @@
-.codeSpace{
+.codeSpace {
   padding-left: 5vw;
   padding-right: 5vw;
 }
-.coding > div{
-  border-radius: .6rem !important;
+.coding > div {
+  border-radius: 0.6rem !important;
 }
-.coding{
+.coding {
   margin-bottom: 1rem;
 }
+body {
+  background-color: rgb(250, 223, 224);
+}
+.error > pre {
+  padding: 1rem;
+}
+
+.customHeart:hover {
+  fill: #c9c7c7 !important;
+  transition: fill 0.1s;
+}
+.customHeart:active {
+  fill: #a5a5a5 !important;
+  transition: fill 0.1s;
+}
+.active.customHeart:hover {
+  fill: rgb(205, 3, 3) !important;
+  transition: fill 0.1s;
+}
+.active.customHeart:active {
+  fill: rgb(155, 6, 6) !important;
+  transition: fill 0.1s;
+}
+
+
+.titleHeart:hover {
+  fill: #c9c7c7 !important;
+  transition: fill 0.1s;
+}
+.titleHeart:active {
+  fill: #a5a5a5 !important;
+  transition: fill 0.1s;
+}
+.active.titleHeart:hover {
+  fill: rgb(205, 3, 3) !important;
+  transition: fill 0.1s;
+}
+.active.titleHeart:active {
+  fill: rgb(155, 6, 6) !important;
+  transition: fill 0.1s;
+}
+
 body{
   background-color: rgb(250, 223, 224);
 }
-.error > pre{
-  padding: 1rem;
+.editor{
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.875rem;
+  height: 8rem;
+  max-height: 8rem;
+  overflow: auto;
+  flex-basis: 50%;
+  width: 50%;
+  max-width: 50%;
+}
+.editorInner{
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+  white-space: pre;
+  font-family: monospace;
+  min-height: 8rem;
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  height: 8rem;
+  max-height: 8rem;
+}
+.preview{
+  position: relative;
+  padding: 0.5rem;
+  background: white;
+  color: black;
+  height: auto;
+  overflow: auto;
+  flex-basis: 50%;
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error {
+  display: block;
+  padding: 0.5rem;
+  background: rgb(255, 85, 85);
+  color: rgb(248, 248, 242);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  font-size: 0.9em;
+  font-family: "Source Code Pro", monospace;
 }
