@@ -74,13 +74,21 @@ var examples = [{
 }
 ]
 
+const BigHeart = () => {
+  const [active, onClick] = useState(true)
+  return (
+
+    <Heart className={`titleHeart${active ? " active" : ""}`} animationScale={1.1} animationTrigger="both" isActive={active} onClick={() => onClick(!active)} />)
+}
+
+
 function App() {
 
   return (
     <div className="App" style={{ marginTop: "1.25rem" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <BigHeart />
         <div style={{ width: "5rem" }}>
+          <BigHeart />
         </div>
         <div style={{ paddingLeft: ".65rem" }}>
           <h1 style={{ padding: "0", marginBottom: "0", marginTop: ".5rem" }}>React-Heart</h1>
@@ -141,7 +149,3 @@ function App() {
 export default App;
 
 
-const BigHeart = () => {
-  const [active, onClick] = useState(true)
-  return (<Heart className={`titleHeart${active ? " active" : ""}`} animationScale={1.1} animationTrigger="both" isActive={active} onClick={() => onClick(!active)} />)
-}
